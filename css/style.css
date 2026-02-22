@@ -84,6 +84,11 @@ address {
 section {
   scroll-margin-top: 50px; /* высота фиксированного хедера */
 }
+
+svg {
+  display: block;
+  margin: 0 auto;
+}
 /* ============ RESET ============ */
 
 .container {
@@ -313,6 +318,13 @@ section {
 
 .guide-item-title {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.guide-social-icon {
+  stroke: #6e5a64;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 /* ============ /guide ============ */
 
