@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Kollesnichenko's Guide</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container head-menu">
+        <nav class="header-nav">
+           <a class="header-logo" href="index.html">
+          <span class="logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path
+                d="M32 8c6 7 9 13 9 19 0 6-4 11-9 11s-9-5-9-11c0-6 3-12 9-19z"
+                fill="currentColor"
+              />
+              <path
+                d="M12 30c8 3 14 7 18 12 4 5 3 12-2 16-5 4-12 3-16-2-4-5-4-13 0-26z"
+                fill="currentColor"
+                opacity=".7"
+              />
+              <path
+                d="M52 30c-8 3-14 7-18 12-4 5-3 12 2 16 5 4 12 3 16-2 4-5 4-13 0-26z"
+                fill="currentColor"
+                opacity=".7"
+              />
+            </svg>
+          </span>
+          <span class="logo-text">Kollesnichenko's Guide</span>
+        </a>
+
+          <ul class="header-menu">
+            <li class="header-menu-item">
+              <a href="#hero" class="header-menu-link">Головна</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#advantages" class="header-menu-link">Переваги</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#about-author" class="header-menu-link">Про автора</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#feedback" class="header-menu-link">Відгуки</a>
+            </li>
+          </ul>
+          <button class="menu-head-nav-btn" type="button" data-mob-menu-open>
+          <svg class="icon-hero-menu" width="24" height="24">
+            <use href="./img/svg/heroicons-solid_menu.svg"></use>
+          </svg>
+        </button>
+        </nav>
+      </div>
+       </div>
+
+      <div class="mob-window" data-mob-menu>
+        <div class="mob-menu-container container">
+          <button class="mob-menu-close-btn" type="button" data-mob-menu-close>
+            <svg class="mob-menu-close-icon" width="8" height="8">
+              <use href=""></use>
+            </svg>
+          </button>
+          <ul class="mob-header-menu">
+            <li class="mob-header-menu-item">
+              <a href="#hero" class="mob-header-menu-link">Головна</a>
+            </li>
+            <li class="mob-header-menu-item">
+              <a href="#advantages" class="mob-header-menu-link">Переваги</a>
+            </li>
+            <li class="mob-header-menu-item">
+              <a href="#about-author" class="mob-header-menu-link">Про автора</a>
+            </li>
+            <li class="mob-header-menu-item">
+              <a href="#feedback" class="mob-header-menu-link">Відгуки</a>
+            </li>
+          </ul>
+    </header>
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img
+            class="hero-image"  
+            srcset="
+            ./img/Frame 1-1x-opt.webp 1x,
+            ./img/Frame 1-2x-opt.webp 2x" 
+            src="./img/Frame 1-1x-opt.webp" 
+            alt="" 
+            />
+            <p class="hero-eyebrow">Твій особистий гід</p>
+            <h1 class="hero-title">Народжувати в Німеччині — спокійно</h1>
+            <p class="hero-text">
+                Документи та виплати без стресу і помилок !
+              </p>
+          </div>
+          <div class="hero-buttons">
+            <button class="hero-btn-main btn">Перейти до гайду</button>
+              <button class="hero-btn btn" type="button" id="scroll-btn">Дізнатися більше</button>
+          </div>
+        </div>
+      </section>
+      <section class="advantages" id="advantages">
+        <div class="container">
+          <h2 class="advantages-title">Тобі не треба розбиратися самій — все вже зібрано в ОДНОМУ МІСЦІ</h2>
+          <ul class="advantages-items">
+            <li class="advantage-item">
+                  <p>
+                    Ти вагітна або тільки плануєш вагітність у Німеччині і
+                    боїшся щось пропустити
+                  </p>
+                </li>
+                <li class="advantage-item">
+                  <p>
+                    Ти губишся в документах і не розумієш, які виплати тобі
+                    належать
+                  </p>
+                </li>
+                <li class="advantage-item">
+                  <p>Не хочеш витрачати години на пошук інформації німецькою</p>
+                </li>
+                <li class="advantage-item">
+                  <p>Боїшся зробити помилку, яка коштуватиме часу або грошей</p>
+                </li>
+                <li class="advantage-item">
+                  <p>Хочеш пройти цей період спокійно — з чітким планом дій</p>
+                </li>
+          </ul>
+          <img 
+          class="advantage-img"
+          srcset="
+              ./img/Frame 3-1x-opt.webp 1x,
+              ./img/Frame 3-2x-opt.webp 2x
+              " 
+              src="./img/Frame 3-1x-opt.webp"
+              alt="" 
+              />
+          
+        </div>
+      </section>
+      <section class="guide" id="guide">
+        <div class="container">
+          <h2 class="guide-title">Що всередині гайду?</h2>
+          <p class="guide-text">Тут ти знайдеш усе, що потрібно знати про вагітність, пологи та перший рік дитини в Німеччині.</p>
+      <ul class="guide-items">
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Вагітність у Німеччині</h3>
+                <p class="guide-item-text
+                ">
+                Як працює система ведення вагітності: гінеколог, страхування, аналізи, обстеження, вибір лікаря та клініки, курси підготовки до пологів.</p>
+              </li>
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Пологи</h3>
+                <p class="guide-item-text
+                ">
+                Де і як проходять пологи, які є варіанти (партнерські, у воді, з епідуральною анестезією), як обрати клініку, коли їхати в пологовий і що брати з собою.</p>
+              </li>
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Оформлення документів</h3>
+                <p class="guide-item-text">
+                Покроковий алгоритм оформлення всіх документів у Німеччині та Україні: свідоцтво про народження, прописка, ВНЖ, виплати, український закордонний паспорт.</p>
+              </li>
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Фінансові виплати</h3>
+                <p class="guide-item-text">
+                  Всі доступні виплати та програми підтримки: Kindergeld, Elterngeld, допомога від Jobcenter, федеральні фонди, разові виплати та компенсації.</p>
+              </li>
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Перший рік життя дитини</h3>
+                <p class="guide-item-text">
+                Медичні огляди U, вакцинація, педіатр, страхування дитини, особливості медичної системи в Німеччині.</p>
+              </li>
+              <li class="guide-item">
+                <svg></svg>
+                <h3 class="guide-item-title">Дитячий садок або догляд за дитиною</h3>
+                <p>
+                  Пошук садка, черги, типи догляду (Kita, Tagesmutter) та практичні поради з досвіду.</p>
+              </li>
+            </ul>  
+        </div>
+      </section>
+      <section class="feedback" id="feedback"></section>
+      <section class="about-author" id="about-author">
+        <div class="container">
+          <img src="./img/photo_2026-02-22_13-39-31.webp" alt="" class="author-img">
+          <div class="about-author-content">
+             <h2 class="about-author-content-title">Привіт, я Майя.</h2>
+            <p class="about-author-content-text">Мені 26, я мама двох дітей і вже 4 роки живу в Німеччині за §24. Я пройшла шлях вагітності, пологів і перших місяців з дитиною в іншій країні — з нуля, без системи й без чітких інструкцій.</h3>
+            <p>
+             Моя донька народилась в Україні, а син — вже в Німеччині. 
+             І цей досвід важко порівняти. Саме тому я почала ділитися всім, що дізналась: про лікарів, документи, виплати, страхи й реальність після пологів.
+До мене регулярно звертались жінки з тими ж питаннями, з якими колись зіткнулась я. Так і народився цей гайд — щоб ти не губилась, не здогадувалась і не витрачала місяці на пошуки відповідей.
+Я вже пройшла цей шлях — і тепер допоможу тобі пройти його спокійніше
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-privacy">
+          <p class="footer-privacy-text">Публічна оферта</p>
+            <p class="footer-privacy-text">Політика конфіденційності</p>
+        </div>
+        <div class="footer-social-content">
+          <p class="footer-title">© 2026 Kollesnichenko's Guide. Все права защищены.</p>
+          <ul class="footer-items-links">
+            <li class="footer-item-link">
+              <a href="" class="footer-link">
+                  <svg width="34" height="34" class="footer-social-icon">
+                  <use href="./img/svg/symbol-defs.svg#icon-instagram-2"></use>
+                </svg>
+            </a>
+            </li>
+            <li class="footer-item-link"><a href="" class="footer-link">
+              <svg width="34" height="34" class="footer-social-icon">
+              <use href="./img/svg/symbol-defs.svg#icon-telegram"></use>
+            </svg> 
+          </a>
+        </li>
+          </ul>
+        </div>
+        
+      </div>
+    </footer>
+
+<script type="module" src="./js/script.js"></script>
+  </body>
+</html>
