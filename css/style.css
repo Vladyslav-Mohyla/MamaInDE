@@ -1,12 +1,12 @@
 :root {
-  --beige: #f8f3ee;
+  --beige: rgb(248, 243, 238);
   --blush: #f7d9e4;
   --mint: #d9f1ea;
   --lavender: #e7dff4;
   --rose: #f2a6c2;
   --text: #3c2f38;
-  --muted: #6e5a64;
-  --white: #ffffff;
+  --muted: rgb(110, 90, 100);
+  --white: rgb(255, 255, 255);
   --shadow: 0 18px 40px rgba(92, 64, 78, 0.15);
 }
 
@@ -92,7 +92,7 @@ svg {
 /* ============ RESET ============ */
 
 .container {
-  max-width: 318px;
+  max-width: 100%px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -299,6 +299,7 @@ svg {
 .guide {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  background: var(--white);
 }
 
 .guide-title {
@@ -353,6 +354,128 @@ svg {
 }
 
 /* ============ /about-author ============ */
+
+/* ============ pay ============ */
+.pay {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: var(--beige);
+}
+
+.pay-time {
+  font-size: 3rem;
+}
+
+.pay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pay-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pay-link {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  background-color: var(--rose);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* ============ /pay ============ */
+
+/* ============ faq ============ */
+.faq {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.faq-title {
+  margin-bottom: 1rem;
+}
+
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* .container-question:hover .question {
+  color: var(--rose);
+} */
+
+.faq-question {
+  border-bottom: 1px solid #ddd;
+}
+
+.question {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: default;
+}
+
+.toggle-bth {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.toggle-bth.active {
+  transform: rotate(45deg); /* поменяется плюс на крестик */
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.2s ease,
+    padding-top 0.2s ease,
+    padding-bottom 0.2s ease;
+  font-size: 1rem;
+  color: #555;
+  margin-left: 5px;
+  flex-basis: 100%;
+  padding: 0 5px;
+}
+
+.answer.active {
+  max-height: 500px; /* достаточно большое значение для плавного раскрытия */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* ============ /faq ============ */
 
 /* ============ footer ============ */
 .footer {
