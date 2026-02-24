@@ -1,5 +1,7 @@
 ﻿const scrollBtn = document.querySelector("#scroll-btn");
 const guideSection = document.querySelector("#guide");
+const getGude = document.querySelector("#hero-btn-main");
+const paySection = document.querySelector("#pay");
 const openBtn = document.querySelector("[data-mob-menu-open]");
 const closeBtn = document.querySelector("[data-mob-menu-close]");
 const mobMenu = document.querySelector("[data-mob-menu]");
@@ -28,6 +30,10 @@ mobMenu.addEventListener("click", (e) => {
 
 scrollBtn.addEventListener("click", function () {
   guideSection.scrollIntoView({ behavior: "smooth" });
+});
+
+getGude.addEventListener("click", function () {
+  pay.scrollIntoView({ behavior: "smooth" });
 });
 
 modalLinks.forEach((link) => {

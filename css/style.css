@@ -225,11 +225,12 @@ svg {
   position: relative;
 }
 .hero-image {
-  width: 250px;
+  width: 300px;
   border-radius: 28px;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   margin: 0 auto;
 }
+
 .hero-eyebrow {
   text-align: center;
   text-transform: uppercase;
@@ -315,15 +316,15 @@ svg {
   color: rgb(46, 47, 66, 0.4);
 }
 
-.hero-text-afer-discount-price {
-  font-size: 2rem;
+/* .hero-text-afer-discount-price {
+  font-size: 1.8rem;
   position: absolute;
-  bottom: 1px;
-  right: 30%;
+  top: 96%;
+  right: 60%;
   transform: rotate(-15deg);
   background-color: var(--mint);
   border-radius: 28px;
-}
+} */
 /* ============ /HERO ============ */
 
 /* ============ advantages ============ */
@@ -425,16 +426,27 @@ svg {
   background: var(--beige);
 }
 
+.pay-title {
+  width: 338px;
+}
+
 .pay-time {
   font-size: 3rem;
 }
 
 .pay-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.hero-text-before-discount-price {
+  position: absolute;
+  top: 20px;
+  right: 50%;
 }
 
 .pay-buttons {
