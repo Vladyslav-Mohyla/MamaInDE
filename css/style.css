@@ -96,7 +96,7 @@ svg {
 /* ============ RESET ============ */
 
 .container {
-  width: 100%;
+  max-width: 400px;
   padding: 0 10px;
   margin: 0 auto;
 }
