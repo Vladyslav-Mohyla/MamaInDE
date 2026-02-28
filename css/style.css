@@ -4,10 +4,13 @@
   --mint: #d9f1ea;
   --lavender: #e7dff4;
   --rose: #f2a6c2;
+  --rose-2: #e75c7d;
   --text: #3c2f38;
   --muted: rgb(110, 90, 100);
   --white: rgb(255, 255, 255);
   --shadow: 0 18px 40px rgba(92, 64, 78, 0.15);
+  --font-size-title: 1.4em;
+  --padding-section: 2rem 0 2rem 0;
 }
 
 /* ============ RESET ============ */
@@ -82,7 +85,7 @@ address {
 }
 
 section {
-  scroll-margin-top: 50px; /* высота фиксированного хедера */
+  scroll-margin-top: 50%; /* высота фиксированного хедера */
 }
 
 svg {
@@ -99,10 +102,13 @@ svg {
 
 .btn {
   border: none;
+  background: var(--rose);
+  color: var(--white);
   padding: 0.85rem 1.8rem;
   border-radius: 30px;
   font-weight: 600;
   font-size: 0.95rem;
+  box-shadow: 0 12px 24px rgba(242, 166, 194, 0.35);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -114,8 +120,9 @@ svg {
 
 /* ============ HERO ============ */
 .hero {
+  padding: var(--padding-section);
   padding-top: 0.5rem;
-  padding-bottom: 2rem;
+  background: var(--white);
 }
 
 .hero-content {
@@ -123,21 +130,14 @@ svg {
 }
 .hero-image {
   position: absolute;
-  top: 4rem;
+  top: 70px;
   width: 100%;
 }
 
-.hero-eyebrow {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.7rem;
-  color: var(--muted);
-  margin-top: 1rem;
-}
 .hero-title {
   text-align: center;
-  font-size: 1.4rem;
+  text-align: center;
+  font-size: var(--font-size-title);
 }
 
 .hero-text {
@@ -147,8 +147,8 @@ svg {
 .hero-text-discount {
   position: absolute;
   z-index: 2;
-  top: 7rem;
-  right: 3rem;
+  top: 120px;
+  right: 48px;
   font-size: 17px;
   font-weight: bold;
   color: var(--rose);
@@ -166,8 +166,8 @@ svg {
 .hero-text-discount-after {
   position: absolute;
   z-index: 2;
-  top: 20rem;
-  left: 4rem;
+  top: 320px;
+  left: 64px;
   font-size: 27px;
   border-radius: 4px;
   font-weight: bold;
@@ -254,8 +254,18 @@ svg {
 
 /* ============ advantages ============ */
 .advantages {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
+  background: var(--beige);
+}
+
+.advantages-title {
+  text-align: center;
+  font-size: var(--font-size-title);
+}
+
+.item-color {
+  font-weight: 700;
+  color: var(--rose-2);
 }
 
 .advantages-items {
@@ -271,7 +281,7 @@ svg {
   background: var(--white);
   padding: 1rem;
   border-radius: 28px;
-  box-shadow: 0 8px 20px rgba(92, 64, 78, 0.1);
+  box-shadow: 8px 20px 8px 20px rgba(92, 64, 78, 0.1);
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -286,8 +296,7 @@ svg {
 
 /* ============ guide ============ */
 .guide {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
   background: var(--white);
 }
 
@@ -295,6 +304,7 @@ svg {
   text-align: center;
 }
 .guide-text {
+  text-align: center;
   margin-top: 1rem;
 }
 
@@ -303,12 +313,27 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.guide-item {
+  display: flex;
+  align-items: flex-start;
   gap: 1rem;
 }
 
+.guide-social-icon {
+  flex-shrink: 0; /* чтобы иконка не сжималась */
+}
+
+.guide-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .guide-item-title {
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .guide-social-icon {
@@ -320,8 +345,8 @@ svg {
 
 /* ============ about-author ============ */
 .about-author {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
+  background: var(--beige);
 }
 
 .about-author-content-title {
@@ -346,13 +371,13 @@ svg {
 
 /* ============ pay ============ */
 .pay {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
   background: var(--beige);
 }
 
 .pay-title {
-  width: 338px;
+  text-align: center;
+  font-size: var(--font-size-title);
 }
 
 .pay-time {
@@ -396,13 +421,81 @@ svg {
 
 /* ============ /pay ============ */
 
+/* ============ feedback slider styles ============ */
+.feedback {
+  padding: var(--padding-section);
+  background: var(--white);
+}
+
+.feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: auto;
+  min-height: 150px;
+}
+.feedback-slider {
+  overflow: hidden;
+  width: 100%;
+}
+.feedback-slide {
+  display: none;
+  text-align: center;
+}
+.feedback-slide.active {
+  display: block;
+}
+
+.feedback-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+.feedback-btn:hover {
+  color: #000;
+}
+
+/* ============ guide-for-you ============ */
+.guide-for-you {
+  padding: var(--padding-section);
+}
+
+.title-guide-for-you {
+  text-align: center;
+  font-size: var(--font-size-title);
+}
+.btn-guide-for-you {
+  display: block;
+
+  margin: 1rem auto 0;
+}
+
+.guide-for-you-list {
+  margin-bottom: 1rem;
+}
+
+.img-guide-for-you {
+  max-height: 200px;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+/* ============ /guide-for-you ============ */
+
 /* ============ faq ============ */
 .faq {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
+  background: var(--beige);
 }
 
 .faq-title {
+  font-size: var(--font-size-title);
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -479,8 +572,8 @@ svg {
 
 /* ============ footer ============ */
 .footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--padding-section);
+  background: var(--white);
 }
 
 .footer-privacy {
@@ -514,36 +607,3 @@ svg {
 }
 
 /* ============ /footer ============ */
-
-@media (min-width: 767px) {
-  .container {
-    max-width: 736px;
-    padding: 0 45px;
-  }
-
-  .menu-head-nav-btn {
-    display: none;
-  }
-
-  .header-menu {
-    display: inline-flex;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .advantage-item {
-    width: 100%;
-  }
-
-  .footer-title {
-    max-width: 260px;
-  }
-
-  .footer-social-content {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
