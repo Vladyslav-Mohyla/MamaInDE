@@ -123,7 +123,6 @@ svg {
 .hero {
   padding: var(--padding-section);
   padding-top: 0.5rem;
-  background: var(--white);
 }
 
 .hero-content {
@@ -242,21 +241,11 @@ svg {
   color: rgb(46, 47, 66, 0.4);
 }
 
-/* .hero-text-afer-discount-price {
-  font-size: 1.8rem;
-  position: absolute;
-  top: 96%;
-  right: 60%;
-  transform: rotate(-15deg);
-  background-color: var(--mint);
-  border-radius: 28px;
-} */
 /* ============ /HERO ============ */
 
 /* ============ advantages ============ */
 .advantages {
   padding: var(--padding-section);
-  background: var(--beige);
 }
 
 .advantages-title {
@@ -282,7 +271,7 @@ svg {
   background: var(--white);
   padding: 1rem;
   border-radius: 28px;
-  box-shadow: 8px 20px 8px 20px rgba(92, 64, 78, 0.1);
+  box-shadow: 8px 5px 8px 5px rgba(92, 64, 78, 0.1);
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -298,7 +287,6 @@ svg {
 /* ============ guide ============ */
 .guide {
   padding: var(--padding-section);
-  background: var(--white);
 }
 
 .guide-title {
@@ -347,7 +335,6 @@ svg {
 /* ============ about-author ============ */
 .about-author {
   padding: var(--padding-section);
-  background: var(--beige);
 }
 
 .about-author-content-title {
@@ -373,7 +360,6 @@ svg {
 /* ============ pay ============ */
 .pay {
   padding: var(--padding-section);
-  background: var(--beige);
 }
 
 .pay-title {
@@ -425,7 +411,6 @@ svg {
 /* ============ feedback slider styles ============ */
 .feedback {
   padding: var(--padding-section);
-  background: var(--white);
 }
 
 .feedback-container {
@@ -491,7 +476,6 @@ svg {
 /* ============ faq ============ */
 .faq {
   padding: var(--padding-section);
-  background: var(--beige);
 }
 
 .faq-title {
@@ -514,10 +498,6 @@ svg {
   align-items: center;
   cursor: pointer;
 }
-
-/* .container-question:hover .question {
-  color: var(--rose);
-} */
 
 .faq-question {
   border-bottom: 1px solid #ddd;
@@ -574,7 +554,6 @@ svg {
 /* ============ footer ============ */
 .footer {
   padding: var(--padding-section);
-  background: var(--white);
 }
 
 .footer-privacy {
