@@ -31,6 +31,7 @@ body {
   color: var(--text);
   background: linear-gradient(160deg, var(--beige), #fff);
   line-height: 1.6;
+  padding-bottom: 60px;
 }
 
 h1,
@@ -607,3 +608,33 @@ svg {
 }
 
 /* ============ /footer ============ */
+
+.btn-buy-fixed {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 0 5px; /* Отступы слева и справа */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-buy-fixed .btn-buy {
+  background-color: var(--primary-color, #ee6c4d);
+  max-width: 480px; /* Можно задать максимальную ширину */
+  width: 100%;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.btn-buy-fixed .btn-buy:hover {
+  background-color: #d85b3d;
+}

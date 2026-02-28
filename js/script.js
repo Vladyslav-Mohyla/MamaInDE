@@ -2,6 +2,7 @@
 const getGude = document.querySelector("#hero-btn-main");
 const getGuide = document.querySelector("#guide-for-you-hero-btn");
 const paySection = document.querySelector("#pay");
+const btnPayFixed = document.querySelector("#btn-pay-fix");
 const openBtn = document.querySelector("[data-mob-menu-open]") || null;
 const closeBtn = document.querySelector("[data-mob-menu-close]") || null;
 const mobMenu = document.querySelector("[data-mob-menu]") || null;
@@ -42,6 +43,10 @@ getGude.addEventListener("click", function () {
 });
 
 getGuide.addEventListener("click", function () {
+  pay.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+btnPayFixed.addEventListener("click", function () {
   pay.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
