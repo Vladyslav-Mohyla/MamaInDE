@@ -125,7 +125,6 @@ svg {
 }
 .hero {
   padding: var(--padding-section);
-  padding-top: 0.5rem;
 }
 .hero-content {
   position: relative;
@@ -171,6 +170,7 @@ svg {
   font-size: 27px;
   border-radius: 4px;
   font-weight: 700;
+  background: red;
   color: var(--white);
   padding: 4px 10px;
   transform: rotate(-7deg);
@@ -292,6 +292,10 @@ svg {
 .guide-item-title {
   margin-bottom: 10px;
 }
+.about-author-content-title-main {
+  text-align: center;
+}
+
 .about-author-content-title {
   margin-top: 1rem;
 }
