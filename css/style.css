@@ -1,3 +1,30 @@
+img,
+svg {
+  display: block;
+}
+.hero-text-discount-after,
+.hero-title-span {
+  background-color: var(--rose);
+}
+.btn,
+.hero-btn-main {
+  background: var(--rose);
+  box-shadow: 0 12px 24px rgba(242, 166, 194, 0.35);
+}
+.answer,
+.no-scroll,
+.visually-hidden {
+  overflow: hidden;
+}
+.faq-title,
+.footer-privacy-text,
+.guide-text,
+.guide-title,
+.hero-text-before-discount-price,
+.pay-link,
+.swiper-slide {
+  text-align: center;
+}
 :root {
   --beige: rgb(248, 243, 238);
   --blush: #f7d9e4;
@@ -10,60 +37,52 @@
   --white: rgb(255, 255, 255);
   --shadow: 0 18px 40px rgba(92, 64, 78, 0.15);
   --font-size-title: 22px;
-  --padding-section: 2rem 0 2rem 0;
+  --padding-section: 2rem 0;
   --border-radius: 8px;
 }
-
-/* ============ RESET ============ */
 *,
-*::before,
-*::after {
+::after,
+::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
-  font-family: "Poppins", "Comfortaa", sans-serif;
+  font-family: Poppins, Comfortaa, sans-serif;
   color: var(--text);
   background: linear-gradient(160deg, var(--beige), #fff);
   line-height: 1.6;
   padding-bottom: 60px;
 }
-
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+img,
+ol,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
-
-ul,
-ol {
+ol,
+ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 img {
-  display: block;
   width: 100%;
   height: auto;
 }
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -71,62 +90,43 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
 }
-
 button {
   cursor: pointer;
 }
-
 address {
   font-style: normal;
 }
-
 section {
-  scroll-margin-top: 50%; /* высота фиксированного хедера */
-  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  scroll-margin-top: 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 svg {
-  display: block;
   margin: 0 auto;
 }
-/* ============ RESET ============ */
-
 .container {
   max-width: 400px;
   padding: 0 10px;
   margin: 0 auto;
 }
-
 .btn {
   border: none;
-  background: var(--rose);
   color: var(--white);
   padding: 0.85rem 1.8rem;
   border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 0.95rem;
-  box-shadow: 0 12px 24px rgba(242, 166, 194, 0.35);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.3s,
+    box-shadow 0.3s;
 }
-
-.no-scroll {
-  overflow: hidden;
-}
-
-/* ============ HERO ============ */
 .hero {
   padding: var(--padding-section);
   padding-top: 0.5rem;
 }
-
 .hero-content {
   position: relative;
 }
@@ -135,36 +135,34 @@ svg {
   top: 70px;
   width: 100%;
 }
-
-.hero-title {
-  text-align: center;
+.advantages-title,
+.hero-title,
+.pay-title,
+.title-guide-for-you {
   text-align: center;
   font-size: var(--font-size-title);
 }
-
 .hero-text {
-  font-weight: bold;
+  font-weight: 700;
+  margin-top: 1rem;
 }
-
 .hero-text-discount {
   position: absolute;
   z-index: 2;
   top: 120px;
   right: 48px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--rose);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .hero-text-price-before {
   text-decoration: line-through;
-  color: rgb(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 22px;
 }
-
 .hero-text-discount-after {
   position: absolute;
   z-index: 2;
@@ -172,19 +170,10 @@ svg {
   left: 64px;
   font-size: 27px;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--white);
-  background-color: var(--rose);
   padding: 4px 10px;
   transform: rotate(-7deg);
-}
-
-.hero-title-span {
-  background-color: var(--rose);
-}
-
-.hero-text {
-  margin-top: 1rem;
 }
 .hero-buttons {
   display: flex;
@@ -192,25 +181,26 @@ svg {
   margin: 1rem 45px 0;
   gap: 0;
 }
-
 .hero-btn-main {
-  background: var(--rose);
   color: var(--white);
-  box-shadow: 0 12px 24px rgba(242, 166, 194, 0.35);
   width: 100%;
 }
-
 .hero-btn {
-  background: transparent;
+  background: 0 0;
   border: 1px solid rgba(60, 47, 56, 0.25);
   color: var(--text);
 }
-
+.advantage-img,
+.advantage-item,
+.author-img,
+.img-guide-for-you,
+.pay-link {
+  border-radius: var(--border-radius);
+}
 .hero-btn-main:hover,
 .hero-btn:hover {
   transform: translateY(-2px);
 }
-
 .hero-list-advantages {
   display: flex;
   flex-direction: column;
@@ -219,49 +209,41 @@ svg {
   padding-top: 280px;
   gap: 3px;
 }
-
 .hero-list-advantages-item {
   display: flex;
   align-items: center;
   gap: 4px;
   border-bottom: 1px solid var(--blush);
 }
-
 .hero-list-advantages-item p {
   font-size: 13px;
 }
-
 .hero-list-advantages-item svg {
-  width: 20px; /* фиксированная ширина */
-  height: 20px; /* фиксированная высота */
-  flex-shrink: 0; /* не сжимать */
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
-
 .hero-text-before-discount-price {
-  text-align: center;
   font-size: 1.2rem;
   text-decoration: line-through;
-  color: rgb(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
 }
-
-/* ============ /HERO ============ */
-
-/* ============ advantages ============ */
-.advantages {
+.about-author,
+.advantages,
+.faq,
+.feedback,
+.footer,
+.guide,
+.guide-for-you,
+.pay {
   padding: var(--padding-section);
 }
-
-.advantages-title {
-  text-align: center;
-  font-size: var(--font-size-title);
-}
-
 .item-color {
   font-weight: 700;
   color: var(--rose-2);
 }
-
-.advantages-items {
+.advantages-items,
+.footer-social-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,131 +251,78 @@ svg {
   gap: 1rem;
   margin-top: 1rem;
 }
-
+.guide-items,
+.guide-text-container {
+  flex-direction: column;
+  display: flex;
+}
 .advantage-item {
   background: var(--white);
   padding: 1rem;
-  border-radius: var(--border-radius);
   box-shadow: 8px 5px 8px 5px rgba(92, 64, 78, 0.1);
   color: var(--muted);
   font-size: 0.95rem;
 }
-
-.advantage-img {
-  border-radius: var(--border-radius);
+.advantage-img,
+.author-img {
   overflow: hidden;
   box-shadow: var(--shadow);
   margin-top: 1rem;
 }
-/* ============ /advantages ============ */
-
-/* ============ guide ============ */
-.guide {
-  padding: var(--padding-section);
-}
-
-.guide-title {
-  text-align: center;
-}
 .guide-text {
-  text-align: center;
   margin-top: 1rem;
 }
-
 .guide-items {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
   margin-top: 1rem;
 }
-
 .guide-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
-
 .guide-social-icon {
-  flex-shrink: 0; /* чтобы иконка не сжималась */
-}
-
-.guide-text-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.guide-item-title {
-  margin-bottom: 10px;
-}
-
-.guide-social-icon {
+  flex-shrink: 0;
   stroke: #6e5a64;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-/* ============ /guide ============ */
-
-/* ============ about-author ============ */
-.about-author {
-  padding: var(--padding-section);
+.guide-item-title {
+  margin-bottom: 10px;
 }
-
 .about-author-content-title {
   margin-top: 1rem;
 }
-
-.author-img {
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  margin-top: 1rem;
-}
-.about-author-content {
+.about-author-content,
+.faq-questions,
+.pay-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-
-/* ============ /about-author ============ */
-
-/* ============ pay ============ */
-.pay {
-  padding: var(--padding-section);
-}
-
-.pay-title {
-  text-align: center;
-  font-size: var(--font-size-title);
-}
-
 .pay-time {
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .pay-time-container {
-  border-right: 1px solid rgb(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .pay-time-container:last-child {
   border-right: none;
 }
-
 .pay-time-container div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 15px;
 }
-
 .pay-container {
   position: relative;
   display: flex;
@@ -402,139 +331,83 @@ svg {
   align-items: center;
   gap: 1rem;
 }
-
 .hero-text-before-discount-price {
   position: absolute;
   top: 20px;
   right: 50%;
 }
-
-.pay-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 .pay-link {
   display: inline-block;
   padding: 0.85rem 1.8rem;
   background-color: var(--rose);
   color: #fff;
   text-decoration: none;
-  border-radius: var(--border-radius);
   font-weight: 600;
   font-size: 0.95rem;
-  text-align: center;
 }
-
-/* ============ /pay ============ */
-
-/* ============ feedback slider styles ============ */
-.feedback {
-  padding: var(--padding-section);
-}
-
-.feedback-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.swiper {
   position: relative;
-  max-width: auto;
-  min-height: 150px;
-}
-.feedback-slider {
-  display: flex;
-  overflow: hidden;
+  height: 180px;
   width: 100%;
 }
-.feedback-slide {
-  display: none;
-  text-align: center;
+.swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
-.feedback-slide.active {
-  display: block;
+.feedback-img {
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
 }
-
-.feedback-btn {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  user-select: none;
-  color: #555;
-  transition: color 0.3s ease;
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
 }
-.feedback-btn:hover {
-  color: #000;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+  color: var(--text);
 }
-
-/* ============ guide-for-you ============ */
-.guide-for-you {
-  padding: var(--padding-section);
+.swiper-button-prev {
+  left: 1px !important;
 }
-
-.title-guide-for-you {
-  text-align: center;
-  font-size: var(--font-size-title);
+.swiper-button-next {
+  right: 1px !important;
 }
 .btn-guide-for-you {
   display: block;
-
   margin: 1rem auto 0;
 }
-
+.faq-title,
 .guide-for-you-list {
   margin-bottom: 1rem;
 }
-
 .img-guide-for-you {
   max-height: 200px;
   object-fit: cover;
   object-position: 50% 25%;
-  border-radius: var(--border-radius);
 }
-/* ============ /guide-for-you ============ */
-
-/* ============ faq ============ */
-.faq {
-  padding: var(--padding-section);
-}
-
 .faq-title {
   font-size: var(--font-size-title);
-  text-align: center;
-  margin-bottom: 1rem;
 }
-
-.faq-questions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 .container-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-
 .faq-question {
   border-bottom: 1px solid #ddd;
 }
-
 .question {
   flex: 1;
   font-weight: 500;
   font-size: 1.1rem;
   cursor: default;
 }
-
 .toggle-bth {
   background-color: transparent;
   border: none;
@@ -546,98 +419,68 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s;
   line-height: 1;
   padding: 0;
 }
-
 .toggle-bth.active {
-  transform: rotate(45deg); /* поменяется плюс на крестик */
+  transform: rotate(45deg);
 }
-
 .answer {
   max-height: 0;
-  overflow: hidden;
   transition:
-    max-height 0.2s ease,
-    padding-top 0.2s ease,
-    padding-bottom 0.2s ease;
+    max-height 0.2s,
+    padding-top 0.2s,
+    padding-bottom 0.2s;
   font-size: 1rem;
   color: #555;
   margin-left: 5px;
   flex-basis: 100%;
   padding: 0 5px;
 }
-
 .answer.active {
-  max-height: 500px; /* достаточно большое значение для плавного раскрытия */
+  max-height: 500px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* ============ /faq ============ */
-
-/* ============ footer ============ */
-.footer {
-  padding: var(--padding-section);
-}
-
 .footer-privacy {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .footer-privacy-text {
-  text-align: center;
   text-decoration: underline;
   font-weight: 700;
 }
-
-.footer-social-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
 .footer-items-links {
   display: flex;
   gap: 2rem;
 }
-
 .footer-social-icon {
   stroke: #6e5a64;
 }
-
-/* ============ /footer ============ */
-
 .btn-buy-fixed {
   position: fixed;
   bottom: 10px;
   left: 0;
   right: 0;
-  padding: 0 5px; /* Отступы слева и справа */
+  padding: 0 5px;
   z-index: 1000;
   display: flex;
   justify-content: center;
 }
-
 .btn-buy-fixed .btn-buy {
   background-color: var(--primary-color, #ee6c4d);
   width: 100%;
-  color: white;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   display: block;
-  width: 100%;
   font-size: 1.125rem;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(238, 108, 77, 0.4);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
-
 .btn-buy-fixed .btn-buy:hover {
   background-color: #d85b3d;
 }

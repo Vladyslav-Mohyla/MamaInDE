@@ -1,389 +1,316 @@
 <!doctype html>
-<html lang="uk">
+<html lang=uk>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Kollesnichenko's Guide</title>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel=stylesheet>
+    <link rel=stylesheet href=./css/style.css>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css>
+    <title>Kollesnichenko's Guide</title>
 </head>
+
 <body>
-  <main>
-    <!-- hero -->
-    <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            Повний <span class="hero-title-span">ПОКРОКОВИЙ ПЛАН</span> для мами в Німеччині: що, коли і куди подавати
-          </h1>
-          <p class="hero-text-discount">
-            Знижка 63%<span class="hero-text-price-before">19€</span>
-          </p>
-          <p class="hero-text-discount-after">7€</p>
-          <img class="hero-image" src="./img/guide.webp" alt="" />
-          <ul class="hero-list-advantages">
-            <li class="hero-list-advantages-item">
-              <svg>
-                <use href="./img/svg/symbol-defs.svg#icon-check-circle"></use>
-              </svg>
-              <p>Гайд на 30 сторінок чіткої структури</p>
-            </li>
-            <li class="hero-list-advantages-item">
-              <svg>
-                <use href="./img/svg/symbol-defs.svg#icon-check-circle"></use>
-              </svg>
-              <p>Як проходить вагітність у Німеччині без стресу</p>
-            </li>
-            <li class="hero-list-advantages-item">
-              <svg>
-                <use href="./img/svg/symbol-defs.svg#icon-check-circle"></use>
-              </svg>
-              <p>Усі виплати під час вагітності та після пологів</p>
-            </li>
-            <li class="hero-list-advantages-item">
-              <svg>
-                <use href="./img/svg/symbol-defs.svg#icon-check-circle"></use>
-              </svg>
-              <p>Покрокове оформлення документів для малюка</p>
-            </li>
-          </ul>
-          <p class="hero-text">
-            Усі документи, виплати та терміни зібрані в одному ГАЙДІ – щоб ти нічого не шукала і була спокійна
-          </p>
-        </div>
-        <div class="hero-buttons">
-          <button class="hero-btn-main btn" id="hero-btn-main">ОТРИМАТИ ГАЙД ЗІ ЗНИЖКОЮ</button>
-        </div>
-      </div>
-    </section>
-    <!-- /hero -->
-
-    <!-- advantages -->
-    <section class="advantages" id="advantages">
-      <div class="container">
-        <h2 class="advantages-title">Що ти отримаєш?</h2>
-        <ul class="advantages-items">
-          <li class="advantage-item">
-            <p>
-              <span class="item-color"><span style="color:black; font-weight: bold;">Повний</span> структурований гайд на 30 сторінок</span> — без хаосу та пошуків по різних сайтах
-            </p>
-          </li>
-          <li class="advantage-item">
-            <p>
-              <span style="color:black; font-weight: bold;">Конкретні</span> <span class="item-color">виплати</span> <span style="color:black; font-weight: bold;">та</span> <span class="item-color">фінансова допомога</span>: Jobcenter, Фонд матері та дитини, Elterngeld, Kindergeld, виплати з України — з поясненнями, кому і як оформити
-            </p>
-          </li>
-          <li class="advantage-item">
-            <p><span style="color:black; font-weight: bold;">Покрокове оформлення</span> <span class="item-color">документів для малюка</span>: страховка, свідоцтво про народження, довідка про громадянство України, закордонний паспорт, правильні переклади</p>
-          </li>
-          <li class="advantage-item">
-            <p><span style="color:black; font-weight: bold;">Реальне розуміння, як проходить</span> <span class="item-color">вагітність у Німеччині</span>: пологи, пологові будинки, Hebamme та вся система підтримки</p>
-          </li>
-          <li class="advantage-item">
-            <p><span class="item-color">Гарантія</span> <span style="color:black; font-weight: bold;">повернення коштів протягом 3 днів</span> — без пояснення причини, якщо гайд не виправдає очікувань</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- /advantages -->
-
-     <!-- pay -->
-      <section class="pay" id="pay">
-  <div class="pay-container container">
-    <h2 class="pay-title">Спеціальна стартова ціна діє:</h2>
-    <ul class="pay-time" id="countdown">
-      <li class="pay-time-container">
-        <div>
-          <span class="days">00 </span><span style="color: rgb(0, 0, 0, 0.2);">Days</span>
-        </div>
-      </li>
-      <li class="pay-time-container">
-        <div>
-          <span class="hours">00 </span><span style="color: rgb(0, 0, 0, 0.2);">Hours</span>
-        </div>
-      </li>
-      <li class="pay-time-container">
-        <div>
-          <span class="minutes">00 </span><span style="color: rgb(0, 0, 0, 0.2);">Minutes</span>
-        </div>
-      </li >
-      <li class="pay-time-container">
-        <div>
-          <span class="seconds">00 </span><span style="color: rgb(0, 0, 0, 0.2);">Seconds</span>
-        </div>
-        </li>
-      </ul>
-    <div class="pay-buttons">
-      <a class="pay-link" href="https://secure.wayforpay.com/button/bb2165241986d" target="_blank" rel="noopener noreferrer">Придбати гайд зі знижкою</a>
-      <a class="pay-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZYFQ6B5XJKQFS" target="_blank" rel="noopener noreferrer">Купити через PayPal</a>
-    </div>
-    <p>Для німецьких карток та міжнародних платежів  —обирайте PayPal 🇩🇪 </p>
-  </div>
-</section>
-      <!-- /pay -->
-
-    <!-- feedback -->
-    <section class="feedback" id="feedback">
-      <div class="container">
-        <h2 class="hero-title">Відгуки тих, хто вже придбав гайд:</h2>
-        <div class="feedback-container">
-          <button class="feedback-btn feedback-btn-prev" aria-label="Previous review">&#10094;</button>
-          <div class="feedback-slider">
-            <div class="feedback-slide">
-              <img src="./img/feedback/feedback_1.webp" alt="Review 1" class="feedback-img" />
-            </div>
-            <div class="feedback-slide">
-              <img src="./img/feedback/feedback_2.webp" alt="Review 2" class="feedback-img" />
-            </div>
-            <div class="feedback-slide">
-              <img src="./img/feedback/feedback_3.webp" alt="Review 3" class="feedback-img" />
-            </div>
-            <div class="feedback-slide">
-              <img src="./img/feedback/feedback_4.webp" alt="Review 4" class="feedback-img" />
-            </div>
-            <div class="feedback-slide">
-              <img src="./img/feedback/feedback_5.webp" alt="Review 5" class="feedback-img" />
-            </div>
-          </div>
-          <button class="feedback-btn feedback-btn-next" aria-label="Next review">&#10095;</button>
-        </div>
-        <!-- Feedback slider script moved to js/script.js -->
-      </section>
-      <!-- /feedback -->
-
-      <!-- guide-for-you -->
-      <section class="guide-for-you" id="guide-for-you">
-        <div class="container">
-          <h2 class="title-guide-for-you">Цей гайд для тебе, якщо:</h2>
-          <ul class="guide-for-you-list advantages-items">
-            <li class="advantage-item">
-              <p>🤰 Ти вагітна або тільки плануєш вагітність у Німеччині і боїшся щось пропустити</p>
-            </li>
-            <li class="advantage-item">
-              <p>📑 Ти губишся в документах і не розумієш, які виплати тобі належать</p>
-            </li>
-            <li class="advantage-item">
-              <p>⏳ Не хочеш витрачати години на пошук інформації німецькою</p>
-            </li>
-            <li class="advantage-item">
-              <p>⚠️ Боїшся зробити помилку, яка коштуватиме часу або грошей</p>
-            </li>
-            <li class="advantage-item">
-              <p>🕊 Хочеш пройти цей період спокійно — з чітким планом дій</p>
-            </li>
-          </ul>
-          <h3 class="title-guide-for-you">
-            Тобі не треба розбиратися самій — все вже зібрано в ОДНОМУ МІСЦІ
-          </h3>
-          <img
-            class="img-guide-for-you"
-            srcset="./img/frame-3-1x-opt.webp 1x, ./img/frame-3-2x-opt.webp 2x"
-            src="./img/frame-3-1x-opt.webp"
-            alt="My daughter"
-          />
-          <button class="btn-guide-for-you btn" id="guide-for-you-hero-btn">Завантажити гайд</button>
-        </div>
-      </section>
-
-     
-
-      <!-- guide -->
-      <section class="guide" id="guide">
-        <div class="container">
-          <h2 class="guide-title">Що всередині гайду?</h2>
-          <p class="guide-text">Тут ти знайдеш усе, що потрібно знати про вагітність, пологи та перший рік дитини в Німеччині.</p>
-          <ul class="guide-items">
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-pregnant-svgrepo-com"></use>
-              </svg>
-             
-                <div class="guide-text-container">
-                  <h3 class="guide-item-title">Вагітність у Німеччині</h3>
-                  <p class="guide-item-text">
-                    Як працює система ведення вагітності: гінеколог, страхування, аналізи, обстеження, вибір лікаря та клініки, курси підготовки до пологів.
-                  </p>
+    <main>
+        <section class=hero id=hero>
+            <div class=container>
+                <div class=hero-content>
+                    <h1 class=hero-title>Повний <span class=hero-title-span>ПОКРОКОВИЙ ПЛАН</span> для мами в Німеччині:
+                        що, коли і куди подавати</h1>
+                    <p class=hero-text-discount>Знижка 63%<span class=hero-text-price-before>19€</span></p>
+                    <p class=hero-text-discount-after>7€</p><img class=hero-image src=./img/guide.webp alt="">
+                    <ul class=hero-list-advantages>
+                        <li class=hero-list-advantages-item><svg>
+                                <use href=./img/svg/symbol-defs.svg#icon-check-circle></use>
+                            </svg>
+                            <p>Гайд на 30 сторінок чіткої структури</p>
+                        </li>
+                        <li class=hero-list-advantages-item><svg>
+                                <use href=./img/svg/symbol-defs.svg#icon-check-circle></use>
+                            </svg>
+                            <p>Як проходить вагітність у Німеччині без стресу</p>
+                        </li>
+                        <li class=hero-list-advantages-item><svg>
+                                <use href=./img/svg/symbol-defs.svg#icon-check-circle></use>
+                            </svg>
+                            <p>Усі виплати під час вагітності та після пологів</p>
+                        </li>
+                        <li class=hero-list-advantages-item><svg>
+                                <use href=./img/svg/symbol-defs.svg#icon-check-circle></use>
+                            </svg>
+                            <p>Покрокове оформлення документів для малюка</p>
+                        </li>
+                    </ul>
+                    <p class=hero-text>Усі документи, виплати та терміни зібрані в одному ГАЙДІ – щоб ти нічого не
+                        шукала і була спокійна</p>
                 </div>
-              
-            </li>
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-hospital-svgrepo-com"></use>
-              </svg>
-              <div class="guide-text-container">
-                <h3 class="guide-item-title">Пологи</h3>
-                <p class="guide-item-text">
-                  Де і як проходять пологи, які є варіанти (партнерські, у воді, з епідуральною анестезією), як обрати клініку, коли їхати в пологовий і що брати з собою.
-                </p>
-              </div>
-            </li>
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-documents-svgrepo-com"></use>
-              </svg>
-              <div class="guide-text-container">
-                <h3 class="guide-item-title">Оформлення документів</h3>
-                <p class="guide-item-text">
-                  Покроковий алгоритм оформлення всіх документів у Німеччині та Україні: свідоцтво про народження, прописка, ВНЖ, виплати, український закордонний паспорт.
-                </p>
-              </div>
-            </li>
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-wallet"></use>
-              </svg>
-              <div class="guide-text-container">
-                <h3 class="guide-item-title">Фінансові виплати</h3>
-                <p class="guide-item-text">
-                  Всі доступні виплати та програми підтримки: Kindergeld, Elterngeld, допомога від Jobcenter, федеральні фонди, разові виплати та компенсації.
-                </p>
-              </div>
-            </li>
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-baby-19-svgrepo-com"></use>
-              </svg>
-              <div class="guide-text-container">
-                <h3 class="guide-item-title">Перший рік життя дитини</h3>
-                <p class="guide-item-text">
-                  Медичні огляди U, вакцинація, педіатр, страхування дитини, особливості медичної системи в Німеччині.
-                </p>
-              </div>
-            </li>
-            <li class="guide-item">
-              <svg width="44" height="44" class="guide-social-icon">
-                <use href="./img/svg/symbol-defs-2.svg#icon-baby-stroller-svgrepo-com"></use>
-              </svg>
-              <div class="guide-text-container">
-                <h3 class="guide-item-title">Дитячий садок або догляд за дитиною</h3>
-                <p>
-                  Пошук садка, черги, типи догляду (Kita, Tagesmutter) та практичні поради з досвіду.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- /guide -->
-
-      <!-- about-author -->
-      <section class="about-author" id="about-author">
-        <div class="container">
-          <img src="./img/photo_2026-02-22_13-39-31.webp" alt="" class="author-img" />
-          <div class="about-author-content">
-            <h2 class="about-author-content-title">Привіт, я Майя.</h2>
-            <p class="about-author-content-text">
-              Мені 26, я мама двох дітей і вже 4 роки живу в Німеччині за §24. Я пройшла шлях вагітності, пологів і перших місяців з дитиною в іншій країні — з нуля, без системи й без чітких інструкцій.
-            </p>
-            <p>
-              Моя донька народилась в Україні, а син — вже в Німеччині. І цей досвід важко порівняти. Саме тому я почала ділитися всім, що дізналась: про лікарів, документи, виплати, страхи й реальність після пологів.
-              До мене регулярно звертались жінки з тими ж питаннями, з якими колись зіткнулась я. Так і народився цей гайд — щоб ти не губилась, не здогадувалась і не витрачала місяці на пошуки відповідей.
-              Я вже пройшла цей шлях — і тепер допоможу тобі пройти його спокійніше
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- /about-author -->
-
-      <!-- faq -->
-      <section class="faq">
-        <div class="container">
-          <h2 class="faq-title">Залишились питання?</h2>
-          <ul class="faq-questions">
-            <li class="faq-question">
-              <div class="container-question">
-                <p class="question">Як я отримаю гайд після оплати?</p>
-                <button class="toggle-bth">+</button>
-              </div>
-              <p class="answer">Після успішної оплати Вас автоматично переведе на сторінку чат-боту в Telegram, де Ви і отримаєте гайд.</p>
-            </li>
-            <li class="faq-question">
-              <div class="container-question">
-                <p class="question">На скільки часу я отримаю доступ до гайду?</p>
-                <button class="toggle-bth">+</button>
-              </div>
-              <p class="answer">Доступ залишається у вас назавжди — Ви можете повертатися до матеріалів у будь‑який момент.</p>
-            </li>
-            <li class="faq-question">
-              <div class="container-question">
-                <p class="question">Що робити, якщо виникла проблема з оплатою або я не отримала гайд ?</p>
-                <button class="toggle-bth">+</button>
-              </div>
-              <p class="answer">Напишіть мені в особисті повідомлення в Telegram: @MaiaKoll — я допоможу вирішити  Ваше питання.</p>
-            </li>
-            <li class="faq-question">
-              <div class="container-question">
-                <p class="question">Чи підійде цей гайд, якщо я вже народила або тільки планую вагітність ?</p>
-                <button class="toggle-bth">+</button>
-              </div>
-              <p class="answer">Так! У гайді є великий розділ про оформлення документів одразу після народження, виплати та лікарів. Або цей гайд допоможе Вам підготуватися заздалегідь і уникнути хаосу.</p>
-            </li>
-            <li class="faq-question">
-              <div class="container-question">
-                <p class="question">Як сплатити, якщо в мене тільки німецька картка ?</p>
-                <button class="toggle-bth">+</button>
-              </div>
-              <p class="answer">На другій сторінці сайту ви знайдете кнопку "Купити через PayPal". Якщо виникнуть проблеми або труднощі - звертайтесь в особисті повідомлення в Телеграм - @MaiaKoll </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- /faq -->
+                <div class=hero-buttons><button class="hero-btn-main btn" id=hero-btn-main>ОТРИМАТИ ГАЙД ЗІ
+                        ЗНИЖКОЮ</button></div>
+            </div>
+        </section>
+        <section class=advantages id=advantages>
+            <div class=container>
+                <h2 class=advantages-title>Що ти отримаєш?</h2>
+                <ul class=advantages-items>
+                    <li class=advantage-item>
+                        <p><span class=item-color><span style=color:#000;font-weight:700>Повний</span> структурований
+                                гайд на 30 сторінок</span> — без хаосу та пошуків по різних сайтах</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p><span style=color:#000;font-weight:700>Конкретні</span> <span
+                                class=item-color>виплати</span><span style=color:#000;font-weight:700>та</span> <span
+                                class=item-color>фінансова допомога</span>: Jobcenter, Фонд матері та дитини,
+                            Elterngeld, Kindergeld, виплати з України — з поясненнями, кому і як оформити</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p><span style=color:#000;font-weight:700>Покрокове оформлення</span> <span
+                                class=item-color>документів для малюка</span>: страховка, свідоцтво про народження,
+                            довідка про громадянство України, закордонний паспорт, правильні переклади</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p><span style=color:#000;font-weight:700>Реальне розуміння, як проходить</span> <span
+                                class=item-color>вагітність у Німеччині</span>: пологи, пологові будинки, Hebamme та вся
+                            система підтримки</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p><span class=item-color>Гарантія</span> <span style=color:#000;font-weight:700>повернення
+                                коштів протягом 3 днів</span> — без пояснення причини, якщо гайд не виправдає очікувань
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class=pay id=pay>
+            <div class="pay-container container">
+                <h2 class=pay-title>Спеціальна стартова ціна діє:</h2>
+                <ul class=pay-time id=countdown>
+                    <li class=pay-time-container>
+                        <div><span class=days>00 </span><span style=color:rgb(0,0,0,.2)>Days</span></div>
+                    </li>
+                    <li class=pay-time-container>
+                        <div><span class=hours>00 </span><span style=color:rgb(0,0,0,.2)>Hours</span></div>
+                    </li>
+                    <li class=pay-time-container>
+                        <div><span class=minutes>00 </span><span style=color:rgb(0,0,0,.2)>Minutes</span></div>
+                    </li>
+                    <li class=pay-time-container>
+                        <div><span class=seconds>00 </span><span style=color:rgb(0,0,0,.2)>Seconds</span></div>
+                    </li>
+                </ul>
+                <div class=pay-buttons><a class=pay-link href=https://secure.wayforpay.com/button/bb2165241986d
+                        target=_blank rel="noopener noreferrer">Придбати гайд зі знижкою</a><a class=pay-link
+                        href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZYFQ6B5XJKQFS"
+                        target=_blank rel="noopener noreferrer">Купити через PayPal</a></div>
+                <p>Для німецьких карток та міжнародних платежів —обирайте PayPal 🇩🇪 </p>
+            </div>
+        </section>
+        <section class=feedback id=feedback>
+            <div class=container>
+                <h2 class=hero-title>Відгуки тих, хто вже придбав гайд:</h2>
+                <div class="swiper mySwiper">
+                    <div class=swiper-wrapper>
+                        <div class=swiper-slide><img src=./img/feedback/feedback_1.webp alt="Review 1"
+                                class=feedback-img width=300 height=100></div>
+                        <div class=swiper-slide><img src=./img/feedback/feedback_2.webp alt="Review 2"
+                                class=feedback-img width=300 height=100></div>
+                        <div class=swiper-slide><img src=./img/feedback/feedback_3.webp alt="Review 3"
+                                class=feedback-img width=300 height=100></div>
+                        <div class=swiper-slide><img src=./img/feedback/feedback_4.webp alt="Review 4"
+                                class=feedback-img width=300 height=100></div>
+                        <div class=swiper-slide><img src=./img/feedback/feedback_5.webp alt="Review 5"
+                                class=feedback-img width=300 height=100></div>
+                    </div>
+                    <div class=swiper-button-next></div>
+                    <div class=swiper-button-prev></div>
+                </div>
+            </div>
+        </section>
+        <section class=guide-for-you id=guide-for-you>
+            <div class=container>
+                <h2 class=title-guide-for-you>Цей гайд для тебе, якщо:</h2>
+                <ul class="guide-for-you-list advantages-items">
+                    <li class=advantage-item>
+                        <p>🤰 Ти вагітна або тільки плануєш вагітність у Німеччині і боїшся щось пропустити</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p>📑 Ти губишся в документах і не розумієш, які виплати тобі належать</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p>⏳ Не хочеш витрачати години на пошук інформації німецькою</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p>⚠️ Боїшся зробити помилку, яка коштуватиме часу або грошей</p>
+                    </li>
+                    <li class=advantage-item>
+                        <p>🕊 Хочеш пройти цей період спокійно — з чітким планом дій</p>
+                    </li>
+                </ul>
+                <h3 class=title-guide-for-you>Тобі не треба розбиратися самій — все вже зібрано в ОДНОМУ МІСЦІ</h3><img
+                    class=img-guide-for-you srcset="./img/frame-3-1x-opt.webp, ./img/frame-3-2x-opt.webp 2x"
+                    src=./img/frame-3-1x-opt.webp alt="My daughter"><button class="btn-guide-for-you btn"
+                    id=guide-for-you-hero-btn>Завантажити гайд</button>
+            </div>
+        </section>
+        <section class=guide id=guide>
+            <div class=container>
+                <h2 class=guide-title>Що всередині гайду?</h2>
+                <p class=guide-text>Тут ти знайдеш усе, що потрібно знати про вагітність, пологи та перший рік дитини в
+                    Німеччині.</p>
+                <ul class=guide-items>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-pregnant-svgrepo-com></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Вагітність у Німеччині</h3>
+                            <p class=guide-item-text>Як працює система ведення вагітності: гінеколог, страхування,
+                                аналізи, обстеження, вибір лікаря та клініки, курси підготовки до пологів.</p>
+                        </div>
+                    </li>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-hospital-svgrepo-com></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Пологи</h3>
+                            <p class=guide-item-text>Де і як проходять пологи, які є варіанти (партнерські, у воді, з
+                                епідуральною анестезією), як обрати клініку, коли їхати в пологовий і що брати з собою.
+                            </p>
+                        </div>
+                    </li>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-documents-svgrepo-com></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Оформлення документів</h3>
+                            <p class=guide-item-text>Покроковий алгоритм оформлення всіх документів у Німеччині та
+                                Україні: свідоцтво про народження, прописка, ВНЖ, виплати, український закордонний
+                                паспорт.</p>
+                        </div>
+                    </li>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-wallet></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Фінансові виплати</h3>
+                            <p class=guide-item-text>Всі доступні виплати та програми підтримки: Kindergeld, Elterngeld,
+                                допомога від Jobcenter, федеральні фонди, разові виплати та компенсації.</p>
+                        </div>
+                    </li>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-baby-19-svgrepo-com></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Перший рік життя дитини</h3>
+                            <p class=guide-item-text>Медичні огляди U, вакцинація, педіатр, страхування дитини,
+                                особливості медичної системи в Німеччині.</p>
+                        </div>
+                    </li>
+                    <li class=guide-item><svg width=44 height=44 class=guide-social-icon>
+                            <use href=./img/svg/symbol-defs-2.svg#icon-baby-stroller-svgrepo-com></use>
+                        </svg>
+                        <div class=guide-text-container>
+                            <h3 class=guide-item-title>Дитячий садок або догляд за дитиною</h3>
+                            <p>Пошук садка, черги, типи догляду (Kita, Tagesmutter) та практичні поради з досвіду.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class=about-author id=about-author>
+            <div class=container><img src=./img/photo_2026-02-22_13-39-31.webp alt="" class=author-img>
+                <div class=about-author-content>
+                    <h2 class=about-author-content-title>Привіт, я Майя.</h2>
+                    <p class=about-author-content-text>Мені 26, я мама двох дітей і вже 4 роки живу в Німеччині за §24.
+                        Я пройшла шлях вагітності, пологів і перших місяців з дитиною в іншій країні — з нуля, без
+                        системи й без чітких інструкцій.</p>
+                    <p>Моя донька народилась в Україні, а син — вже в Німеччині. І цей досвід важко порівняти. Саме тому
+                        я почала ділитися всім, що дізналась: про лікарів, документи, виплати, страхи й реальність після
+                        пологів. До мене регулярно звертались жінки з тими ж питаннями, з якими колись зіткнулась я. Так
+                        і народився цей гайд — щоб ти не губилась, не здогадувалась і не витрачала місяці на пошуки
+                        відповідей. Я вже пройшла цей шлях — і тепер допоможу тобі пройти його спокійніше</p>
+                </div>
+            </div>
+        </section>
+        <section class=faq>
+            <div class=container>
+                <h2 class=faq-title>Залишились питання?</h2>
+                <ul class=faq-questions>
+                    <li class=faq-question>
+                        <div class=container-question>
+                            <p class=question>Як я отримаю гайд після оплати?</p><button class=toggle-bth>+</button>
+                        </div>
+                        <p class=answer>Після успішної оплати Вас автоматично переведе на сторінку чат-боту в Telegram,
+                            де Ви і отримаєте гайд.</p>
+                    </li>
+                    <li class=faq-question>
+                        <div class=container-question>
+                            <p class=question>На скільки часу я отримаю доступ до гайду?</p><button
+                                class=toggle-bth>+</button>
+                        </div>
+                        <p class=answer>Доступ залишається у вас назавжди — Ви можете повертатися до матеріалів у
+                            будь‑який момент.</p>
+                    </li>
+                    <li class=faq-question>
+                        <div class=container-question>
+                            <p class=question>Що робити, якщо виникла проблема з оплатою або я не отримала гайд ?</p>
+                            <button class=toggle-bth>+</button>
+                        </div>
+                        <p class=answer>Напишіть мені в особисті повідомлення в Telegram: @MaiaKoll — я допоможу
+                            вирішити Ваше питання.</p>
+                    </li>
+                    <li class=faq-question>
+                        <div class=container-question>
+                            <p class=question>Чи підійде цей гайд, якщо я вже народила або тільки планую вагітність ?
+                            </p><button class=toggle-bth>+</button>
+                        </div>
+                        <p class=answer>Так! У гайді є великий розділ про оформлення документів одразу після народження,
+                            виплати та лікарів. Або цей гайд допоможе Вам підготуватися заздалегідь і уникнути хаосу.
+                        </p>
+                    </li>
+                    <li class=faq-question>
+                        <div class=container-question>
+                            <p class=question>Як сплатити, якщо в мене тільки німецька картка ?</p><button
+                                class=toggle-bth>+</button>
+                        </div>
+                        <p class=answer>На другій сторінці сайту ви знайдете кнопку "Купити через PayPal". Якщо
+                            виникнуть проблеми або труднощі - звертайтесь в особисті повідомлення в Телеграм - @MaiaKoll
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-privacy">
-          <a
-            class="footer-privacy-text"
-            href="./docs/ПУБЛІЧНА ОФЕРТА ФОП Терехіна А.Ю..pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Публічна оферта</a
-          >
-          <a
-            class="footer-privacy-text"
-            href="./docs/ПОЛІТИКА_КОНФІДЕНЦІЙНОСТІ_ФОП_Терехіна_Аліна_Юріївна.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Політика конфіденційності</a
-          >
+    <footer class=footer>
+        <div class=container>
+            <div class=footer-privacy><a class=footer-privacy-text href="./docs/ПУБЛІЧНА ОФЕРТА ФОП Терехіна А.Ю..pdf"
+                    target=_blank rel="noopener noreferrer">Публічна оферта</a><a class=footer-privacy-text
+                    href=./docs/ПОЛІТИКА_КОНФІДЕНЦІЙНОСТІ_ФОП_Терехіна_Аліна_Юріївна.pdf target=_blank
+                    rel="noopener noreferrer">Політика конфіденційності</a></div>
+            <div class=footer-social-content>
+                <p class=footer-title>© 2026 Kollesnichenko's Guide. Все права защищены.</p>
+                <p class=footer-title>Гайд призначений для особистого використання. Передача третім особам заборонена.
+                </p>
+                <ul class=footer-items-links>
+                    <li class=footer-item-link><a
+                            href="https://www.instagram.com/kollesnichenko?igsh=MXg2bjJubjh3cGk4Zg%3D%3D&utm_source=qr"
+                            class=footer-link><svg width=34 height=34 class=footer-social-icon>
+                                <use href=./img/svg/symbol-defs.svg#icon-instagram-2></use>
+                            </svg></a></li>
+                    <li class=footer-item-link><a href=https://t.me/MaiaKoll class=footer-link target=_blank
+                            rel="noopener noreferrer"><svg width=34 height=34 class=footer-social-icon target=_blank
+                                rel="noopener noreferrer">
+                                <use href=./img/svg/symbol-defs.svg#icon-telegram></use>
+                            </svg></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-social-content">
-          <p class="footer-title">© 2026 Kollesnichenko's Guide. Все права защищены.</p>
-          <p class="footer-title">Гайд призначений для особистого використання. Передача третім особам заборонена.</p>
-          <ul class="footer-items-links">
-            <li class="footer-item-link">
-              <a
-                href="https://www.instagram.com/kollesnichenko?igsh=MXg2bjJubjh3cGk4Zg%3D%3D&utm_source=qr"
-                class="footer-link"
-              >
-                <svg width="34" height="34" class="footer-social-icon">
-                  <use href="./img/svg/symbol-defs.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item-link">
-              <a href="https://t.me/MaiaKoll" class="footer-link" target="_blank" rel="noopener noreferrer">
-                <svg width="34" height="34" class="footer-social-icon" target="_blank" rel="noopener noreferrer">
-                  <use href="./img/svg/symbol-defs.svg#icon-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </footer>
+    <div class="btn-buy-fixed container"><button class="btn-buy btn" id=btn-pay-fix>Придбати гайд</button></div>
+    <script src=https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js></script>
+    <script type=module src=./js/script.js></script>
+</body>
 
-    <div class="btn-buy-fixed container">
-  <button class="btn-buy btn" id="btn-pay-fix">Придбати гайд</button>
-</div>
-
-    <script type="module" src="./js/script.js"></script>
-  </body>
 </html>
