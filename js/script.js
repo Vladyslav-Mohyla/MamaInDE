@@ -6,73 +6,94 @@ const guideSection = document.querySelector("#guide"),
   modalLinks = document.querySelectorAll(".mob-header-menu a[href^='#']"),
   toggleBtn = document.querySelector(".toggle-btn"),
   answer = document.querySelector(".answer"),
-  faqQuestions = document.querySelectorAll(".faq-question"),
-  daysElem = document.querySelector(".days"),
-  hoursElem = document.querySelector(".hours"),
-  minutesElem = document.querySelector(".minutes"),
-  secondsElem = document.querySelector(".seconds");
-(getGude.addEventListener("click", function () {
-  pay.scrollIntoView({ behavior: "smooth", block: "center" });
-}),
-  getGuide.addEventListener("click", function () {
-    pay.scrollIntoView({ behavior: "smooth", block: "center" });
-  }),
-  btnPayFixed.addEventListener("click", function () {
-    pay.scrollIntoView({ behavior: "smooth", block: "center" });
-  }),
-  faqQuestions.forEach((e) => {
-    let t = e.querySelector(".toggle-bth"),
-      n = e.querySelector(".answer"),
-      o = e.querySelector(".container-question");
-    o.addEventListener("click", () => {
-      let e = n.classList.contains("active");
-      e
-        ? (n.classList.remove("active"), t.classList.remove("active"))
-        : (n.classList.add("active"), t.classList.add("active"));
-    });
-  }));
-const countdownKey = "countdownDeadline";
-let countdownDate = localStorage.getItem(countdownKey);
-countdownDate
-  ? (countdownDate = new Date(countdownDate))
-  : ((countdownDate = new Date(Date.now() + 6048e5)),
-    localStorage.setItem(countdownKey, countdownDate));
-let timerId;
-function updateTimer() {
-  let e = new Date(),
-    t = countdownDate - e;
-  if (t <= 0) {
-    ((daysElem.textContent = "00"),
-      (hoursElem.textContent = "00"),
-      (minutesElem.textContent = "00"),
-      (secondsElem.textContent = "00"),
-      clearInterval(timerId));
-    return;
+  faqQuestions = document.querySelectorAll(".faq-question");
+
+function initTimer() {
+  const daysElem = document.querySelector(".days");
+  const hoursElem = document.querySelector(".hours");
+  const minutesElem = document.querySelector(".minutes");
+  if (!daysElem || !hoursElem || !minutesElem) return;
+
+  const countdownKey = "countdownDeadline";
+  let countdownDate;
+  try {
+    const savedDeadline = localStorage.getItem(countdownKey);
+    if (savedDeadline) {
+      countdownDate = new Date(savedDeadline);
+    }
+  } catch (e) {
+    countdownDate = undefined;
   }
-  let n = Math.floor(t / 1e3);
-  ((daysElem.textContent = String(Math.floor(n / 86400)).padStart(2, "0")),
-    (hoursElem.textContent = String(Math.floor((n / 3600) % 24)).padStart(
-      2,
-      "0",
-    )),
-    (minutesElem.textContent = String(Math.floor((n / 60) % 60)).padStart(
-      2,
-      "0",
-    )),
-    (secondsElem.textContent = String(n % 60).padStart(2, "0")));
+
+  // If deadline is missing/invalid/expired, start a new 7-day countdown.
+  if (!(countdownDate instanceof Date) || Number.isNaN(countdownDate.getTime()) || countdownDate <= new Date()) {
+    countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    try {
+      localStorage.setItem(countdownKey, countdownDate.toISOString());
+    } catch (e) {}
+  }
+
+  let timerId;
+
+  function updateTimer() {
+    const now = new Date();
+    let t = countdownDate - now;
+
+    if (t <= 0) {
+      countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      try {
+        localStorage.setItem(countdownKey, countdownDate.toISOString());
+      } catch (e) {}
+      t = countdownDate - now;
+    }
+
+    const totalSec = Math.floor(t / 1000);
+    const days = String(Math.floor(totalSec / 86400)).padStart(2, "0");
+    const hours = String(Math.floor((totalSec / 3600) % 24)).padStart(2, "0");
+    const minutes = String(Math.floor((totalSec / 60) % 60)).padStart(2, "0");
+
+    daysElem.textContent = days;
+    hoursElem.textContent = hours;
+    minutesElem.textContent = minutes;
+  }
+
+  updateTimer();
+  timerId = setInterval(updateTimer, 1000);
 }
-(document.addEventListener("DOMContentLoaded", () => {
-  (updateTimer(), (timerId = setInterval(updateTimer, 1e3)));
-}),
-  document.addEventListener("DOMContentLoaded", () => {
-    new Swiper(".mySwiper", {
-      loop: !0,
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: { delay: 5e3, disableOnInteraction: !1 },
-    });
-  }));
+
+getGude?.addEventListener("click", function () {
+  paySection.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+getGuide?.addEventListener("click", function () {
+  paySection.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+btnPayFixed?.addEventListener("click", function () {
+  paySection.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+faqQuestions.forEach((e) => {
+  let t = e.querySelector(".toggle-bth"),
+    n = e.querySelector(".answer"),
+    o = e.querySelector(".container-question");
+  o?.addEventListener("click", () => {
+    let e = n.classList.contains("active");
+    e
+      ? (n.classList.remove("active"), t.classList.remove("active"))
+      : (n.classList.add("active"), t.classList.add("active"));
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTimer();
+
+  new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: { delay: 5000, disableOnInteraction: false },
+  });
+});

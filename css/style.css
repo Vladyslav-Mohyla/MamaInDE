@@ -170,7 +170,6 @@ svg {
   font-size: 27px;
   border-radius: 4px;
   font-weight: 700;
-  background: red;
   color: var(--white);
   padding: 4px 10px;
   transform: rotate(-7deg);
@@ -297,7 +296,7 @@ svg {
 }
 
 .about-author-content-title {
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .about-author-content,
 .faq-questions,
@@ -474,9 +473,9 @@ svg {
   justify-content: center;
 }
 .btn-buy-fixed .btn-buy {
-  background-color: var(--primary-color, #ee6c4d);
+  background-color: var(--mint);
   width: 100%;
-  color: #fff;
+  color: var(--text);
   padding: 0.75rem 1.5rem;
   border: none;
   display: block;
