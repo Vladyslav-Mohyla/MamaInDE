@@ -2,14 +2,18 @@ name: SSH deploy on push
 on:
   push:
     branches:
-      - main
+      - main # Убедитесь, что ваша ветка в GitHub называется именно main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: rsync deploy
-        uses: burnett01/rsync-deployments@8
+        # ИСПРАВЛЕНО: @main вместо @8
+        uses: burnett01/rsync-deployments@main
         with:
           switches: -avzr --delete
           path: .
