@@ -21,3 +21,4 @@ jobs:
           remote_user: ${{ secrets.REMOTE_USER }}
           remote_key: ${{ secrets.REMOTE_KEY }}
           remote_path: ${{ secrets.REMOTE_PATH }}
+legacy_allow_rsa_hostkeys: true
