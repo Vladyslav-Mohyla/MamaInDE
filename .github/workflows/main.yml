@@ -2,14 +2,14 @@ name: SSH deploy on push
 on:
   push:
     branches:
-    - main
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: rsync deploy
-        uses: burnett01/rsync-deployments@7.0.2
+        uses: burnett01/rsync-deployments@8
         with:
           switches: -avzr --delete
           path: .
