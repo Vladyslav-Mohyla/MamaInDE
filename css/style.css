@@ -138,6 +138,7 @@ svg {
 .hero-title,
 .pay-title,
 .title-guide-for-you {
+  font-weight: 700;
   text-align: center;
   font-size: var(--font-size-title);
 }
@@ -175,13 +176,14 @@ svg {
   transform: rotate(-7deg);
 }
 .hero-buttons {
+  c
   display: flex;
   width: calc(100% - 90px);
   margin: 1rem 45px 0;
   gap: 0;
 }
 .hero-btn-main {
-  color: var(--white);
+  color: black;
   width: 100%;
 }
 .hero-btn {
@@ -194,6 +196,7 @@ svg {
 .author-img,
 .img-guide-for-you,
 .pay-link {
+  min-width: 260px;
   border-radius: var(--border-radius);
 }
 .hero-btn-main:hover,
@@ -307,18 +310,26 @@ svg {
   align-items: center;
   gap: 1rem;
 }
+
+.pay-title {
+  font-size: 18px;
+}
 .pay-time {
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
 }
 .pay-time-container {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  min-width: 133px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
 }
-.pay-time-container:last-child {
+/* .pay-time-container:last-child {
   border-right: none;
-}
+} */
 .pay-time-container div {
   display: flex;
   flex-direction: column;
@@ -339,13 +350,14 @@ svg {
   top: 20px;
   right: 50%;
 }
+
 .pay-link {
   display: inline-block;
   padding: 0.85rem 1.8rem;
   background-color: var(--rose);
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 0.95rem;
 }
 .swiper {
