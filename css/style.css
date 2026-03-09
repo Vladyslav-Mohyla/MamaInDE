@@ -150,7 +150,7 @@ svg {
   position: absolute;
   z-index: 2;
   top: 120px;
-  right: 48px;
+  right: 20px;
   font-size: 17px;
   font-weight: 700;
   color: var(--rose);
@@ -166,8 +166,8 @@ svg {
 .hero-text-discount-after {
   position: absolute;
   z-index: 2;
-  top: 320px;
-  left: 64px;
+  top: 310px;
+  left: 24px;
   font-size: 27px;
   border-radius: 4px;
   font-weight: 700;
