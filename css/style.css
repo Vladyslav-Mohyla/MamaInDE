@@ -149,8 +149,8 @@ svg {
 .hero-text-discount {
   position: absolute;
   z-index: 2;
-  top: 120px;
-  right: 20px;
+  top: 110px;
+  right: 10px;
   font-size: 17px;
   font-weight: 700;
   color: var(--rose);
