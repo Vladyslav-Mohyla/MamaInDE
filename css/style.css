@@ -146,6 +146,7 @@ svg {
   font-weight: 700;
   margin-top: 1rem;
 }
+
 .hero-text-discount {
   position: absolute;
   z-index: 2;
@@ -157,6 +158,9 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.discount {
+  transform: translateX(-40px);
 }
 .hero-text-price-before {
   text-decoration: line-through;
